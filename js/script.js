@@ -29,7 +29,7 @@ otherFunction(); // Bacon is good
 */
 
 
-/* (2) Arrow functions: */
+/* (2) Arrow functions: 
 
 function circleArea1(r) { // Old non-arrow way of doing it
     const PI = Math.PI.toFixed(4);
@@ -46,3 +46,24 @@ let circleArea3 = r => Math.PI.toFixed(4) * r * r; // Fat arrow shorthand
 console.log(circleArea1(7));
 console.log(circleArea2(7));
 console.log(circleArea3(7));
+*/
+
+
+/* (3) Template literals: */
+
+let name = 'John';
+let a = 10;
+let b = 1;
+
+console.log('Hi, I\'m John'); // Old way
+console.log(`Hi, I'm ${name}`); // Template literals
+console.log('My favourite number is ' + (a + b));
+console.log(`My favourite number is ${a + b}`); // Can interpolate (but not best practice)
+
+console.log(`
+
+This is a
+
+multi-line
+test.
+`); // Template literals can print over multiple lines without compromising format
