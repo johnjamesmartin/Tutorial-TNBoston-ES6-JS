@@ -70,7 +70,7 @@ test.
 */
 
 
-/* (4) Spread operator: */
+/* (4) Spread operator:
 
 function addNumbers(a, b, c) {
     console.log(a + b + c);
@@ -85,3 +85,25 @@ let meats = ['bacon', 'ham'];
 let food = ['apples', ...meats, 'kiwi', 'rice']; // Easy way of inserting array into another
 
 console.log(food);
+*/
+
+
+/* (5) Classes: */
+
+class Person {
+    constructor(name, age, weight) {
+        this.name = name;
+        this.age = age;
+        this.weight = weight;
+    }
+
+    displayWeight() {
+        console.log(this.weight);
+    }
+}
+
+let bucky = new Person('Bucky', 87, 6650);
+let sally = new Person('Sally', 21, 89);
+
+bucky.displayWeight();
+sally.displayWeight();
