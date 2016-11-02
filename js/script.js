@@ -49,7 +49,7 @@ console.log(circleArea3(7));
 */
 
 
-/* (3) Template literals: */
+/* (3) Template literals: 
 
 let name = 'John';
 let a = 10;
@@ -67,3 +67,21 @@ This is a
 multi-line
 test.
 `); // Template literals can print over multiple lines without compromising format
+*/
+
+
+/* (4) Spread operator: */
+
+function addNumbers(a, b, c) {
+    console.log(a + b + c);
+}
+
+let nums = [3, 4, 5];
+
+addNumbers(nums[0], nums[1], nums[2]); // Old way
+addNumbers(...nums); // Spread operator
+
+let meats = ['bacon', 'ham'];
+let food = ['apples', ...meats, 'kiwi', 'rice']; // Easy way of inserting array into another
+
+console.log(food);
