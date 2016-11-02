@@ -1,6 +1,6 @@
 'use strict';
 
-/* (1) The 'let' keyword restricts access/scope of a variable to a code block: */
+/* (1) The 'let' keyword restricts access/scope of a variable to a code block:
 
 let movie = 'Good Will Hunting';
 
@@ -26,3 +26,23 @@ function otherFunction() {
 }
 
 otherFunction(); // Bacon is good
+*/
+
+
+/* (2) Arrow functions: */
+
+function circleArea1(r) { // Old non-arrow way of doing it
+    const PI = Math.PI.toFixed(4);
+    return PI * r * r;
+}
+
+let circleArea2 = (r) => { // Fat arrow
+    const PI = Math.PI.toFixed(4);
+    return PI * r * r;
+}
+
+let circleArea3 = r => Math.PI.toFixed(4) * r * r; // Fat arrow shorthand
+
+console.log(circleArea1(7));
+console.log(circleArea2(7));
+console.log(circleArea3(7));
