@@ -88,7 +88,7 @@ console.log(food);
 */
 
 
-/* (5) Classes: */
+/* (5) Classes: 
 
 class Person {
     constructor(name, age, weight) {
@@ -107,3 +107,51 @@ let sally = new Person('Sally', 21, 89);
 
 bucky.displayWeight();
 sally.displayWeight();
+*/
+
+
+/* (6) Inheritence: */
+
+class Person { // super class/parent class
+    constructor(name, age, weight) {
+        this._name = name;
+        this._age = age;
+        this._weight = weight;
+    }
+
+    displayName() {
+        console.log(this._name);
+    }
+
+    displayAge() {
+        console.log(this._age);
+    }
+
+    displayWeight() {
+        console.log(this._weight);
+    }
+}
+
+class Programmer extends Person { // sub class/child class
+    constructor(name, age, weight, language) {
+        super(name, age, weight);
+        this._language = language;
+    }
+
+    displayLanguage() {
+        console.log(this._language);
+    }
+}
+
+let sally = new Person('Sally', 21, 89);
+sally.displayName();
+sally.displayWeight();
+sally.displayAge();
+
+console.log('------------');
+
+let bucky = new Programmer('Bucky Roberts', 87, 987, 'JavaScript');
+bucky.displayName();
+bucky.displayWeight();
+bucky.displayAge();
+bucky.displayLanguage();
