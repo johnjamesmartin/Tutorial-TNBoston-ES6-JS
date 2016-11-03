@@ -110,7 +110,7 @@ sally.displayWeight();
 */
 
 
-/* (6) Inheritence: */
+/* (6) Inheritence: 
 
 class Person { // super class/parent class
     constructor(name, age, weight) {
@@ -155,3 +155,35 @@ bucky.displayName();
 bucky.displayWeight();
 bucky.displayAge();
 bucky.displayLanguage();
+*/
+
+
+/* (7) Generator functions */
+
+function* sampleGenerator() {
+    yield 'apples'; // yield = pause
+    yield 'bacon';
+    console.log('line after bacon');
+    yield 'corn';
+}
+
+let sample = sampleGenerator();
+console.log(sample.next().value); // go to next yield
+console.log(sample.next().value);
+console.log(sample.next().value);
+
+console.log('------------');
+
+function* getNextId() {
+    let id = 0;
+    while (id < 3) {
+        yield id++;
+    }
+}
+
+let createUser = getNextId();
+console.log(createUser.next().value);
+console.log(createUser.next().value);
+console.log('Okay, have to do something else');
+console.log(createUser.next().value);
+console.log(createUser.next().value);
